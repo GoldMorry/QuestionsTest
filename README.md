@@ -65,9 +65,11 @@ src/main/java/com/resumegenerator/
 ## 🛠️ Компиляция и запуск
 
 ### Требования
-- **Java 8+** или выше
+- **Java 8+** или выше 
 - **Maven 3.6+** (опционально)
 - Любая IDE (IntelliJ IDEA, Eclipse, VS Code)
+
+> 💡 **Java Совместимость**: Проект полностью совместим с Java 8+. Если возникают ошибки компиляции в IDE, см. [JAVA_COMPATIBILITY.md](JAVA_COMPATIBILITY.md)
 
 ### Maven (рекомендуется)
 

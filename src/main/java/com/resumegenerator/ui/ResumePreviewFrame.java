@@ -8,8 +8,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Окно предварительного просмотра резюме
@@ -143,7 +145,8 @@ public class ResumePreviewFrame extends JFrame {
                 file = new File(file.getParentFile(), file.getName() + ".html");
             }
             
-            try (FileWriter writer = new FileWriter(file, java.nio.charset.StandardCharsets.UTF_8)) {
+            try (OutputStreamWriter writer = new OutputStreamWriter(
+                    new FileOutputStream(file), StandardCharsets.UTF_8)) {
                 writer.write(htmlContent);
                 JOptionPane.showMessageDialog(this,
                     "Резюме успешно сохранено в файл:\n" + file.getAbsolutePath(),
